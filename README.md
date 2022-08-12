@@ -1,4 +1,4 @@
-# $`\mu`$Lens
+myLens
 
 Requires a Hololens or the Hololens Emulator to run.
 
