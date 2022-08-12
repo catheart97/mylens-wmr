@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+  IgnorableNamespaces="uap mp uap3 uap2">
+
+  <Identity Name="46c3ada1-4860-4671-821b-368825c3d629"
+            Publisher="CN=ronja"
+            Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="46c3ada1-4860-4671-821b-368825c3d629" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>MyLens</DisplayName>
+    <PublisherDisplayName>Ronja Schnur</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.18362.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="My.App">
+        <uap:VisualElements
+             DisplayName="MyLens"
+             Square150x150Logo="Assets\Square150x150Logo.png" 
+             Square44x44Logo="Assets\Square44x44Logo.png" 
+             Description="MyLens"
+             BackgroundColor="#3F3F3F">
+          <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"  Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png">
+            <uap:ShowNameOnTiles>
+              <uap:ShowOn Tile="square150x150Logo"/>
+              <uap:ShowOn Tile="square310x310Logo"/>
+              <uap:ShowOn Tile="wide310x150Logo"/>
+            </uap:ShowNameOnTiles>
+          </uap:DefaultTile >
+          <uap:SplashScreen Image="Assets\SplashScreen.png" />
+          <uap:InitialRotationPreference>
+            <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
+        </uap:VisualElements>
+      </Application>
+  </Applications>
+
+  <Capabilities>
+    <uap:Capability Name="removableStorage"/>
+    <uap3:Capability Name="backgroundMediaPlayback"/>
+    <uap2:Capability Name="spatialPerception"/>
+    <DeviceCapability Name="microphone"/>
+    <DeviceCapability Name="webcam"/></Capabilities>
+</Package>
